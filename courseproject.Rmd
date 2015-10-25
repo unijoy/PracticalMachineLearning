@@ -79,6 +79,7 @@ as we see ,random forest has a better prediction(Accuracy 0.9973)
 
 ##apply it to test data
 ```{r}
+library(randomForest)
 finalpreidiction <- predict(fit_rf,testing)
 finalpreidiction
 ```
@@ -91,5 +92,5 @@ pml_write_files = function(x){
     write.table(x[i],file=filename,quote=FALSE,row.names=FALSE,col.names=FALSE)
   }
 }
-pml_write_files(finalpreidiction)
+# pml_write_files(finalpreidiction)
 ```
